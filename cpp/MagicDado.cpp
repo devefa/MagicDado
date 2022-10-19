@@ -12,14 +12,12 @@
 using namespace std;
 
 int main(){
-    
     srand(time(NULL));
 
-    //se vengono usati due dadi
-    int fd1; //numero facce Dado 1
-    int fd2; //numero facce Dado 2
-
-    int N; //Numero di lanci
+    // se vengono usati due dadi
+    int fd1; // numero facce Dado 1
+    int fd2; // numero facce Dado 2
+    int N; // numero di lanci
 
     cout<<"Inserisci il numero di facce del primo dado: "<<endl;
     cin>>fd1;
@@ -34,27 +32,16 @@ int main(){
     cout<<"Verranno effettuati "<<N<<" lanci:"<<endl;
 
     for(int i=1; i<=N; i++){
-        
-        int d1= rand()%fd1+1; //dado a 'fd1' facce
-        int d2= rand()%fd2+1; //dado a 'fd2' facce
-        
+        int d1= rand()%fd1+1; // dado a 'fd1' facce
+        int d2= rand()%fd2+1; // dado a 'fd2' facce
         cout<<d1<<" "<<d2<<endl;
-            
     }
 
     if(N==1){
-
         cout<<N<<" lancio avvenuto con successo! Spero sia stato un lancio fortunato! ¦¬)"<<endl;
-
     }
-            
-
     else{
-        
         cout<<N<<" lanci avvenuti con successo! Spero siano stati "<<N<<" lanci fortunati! ¦¬)"<<endl;
-
     }   
-    
     return 0;
-
 }
